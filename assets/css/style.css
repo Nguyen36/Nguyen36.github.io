@@ -1,0 +1,447 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.col{ 
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.col-third{
+    width: calc(100%/3);
+}
+.with{
+    width: 800px;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.text-aline{
+    text-align: center !important;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+html{
+    scroll-behavior:smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear: both;
+}
+.color-imp{
+    color: #fff;
+}
+.ticket-list{
+    margin-top: 40px;
+    background: #fff;
+}
+#main{
+    
+}
+#header{
+    height: 48px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#slider{
+    position: relative;
+    margin-top: 48px;
+    padding-top: 50%;
+    background: url('/assets/img/bannhac2.jpg') top center / cover no-repeat;
+}
+.content-section{
+   
+}
+#nav{
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav >li >a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    padding: 0 12px;
+    text-decoration:none;
+    background: #000;
+    line-height: 48px;
+    display: inline-block;
+    
+}
+
+#nav > li:hover > .subnav{
+    display: block;   
+}
+
+#nav > li:hover > a{
+    background: #fff;
+    color: #000;
+    
+}
+#nav .subnav{
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.3);
+}
+#nav .subnav li{
+    
+}
+#nav .subnav a{
+    animation: menuin ease 0.4s;
+    line-height: 38px;
+    display: block;
+    background-color: #fff;
+    color: #000;
+}
+#nav > li{
+    display: inline-block;
+    position: relative;
+}
+#nav .nav-down{
+    font-size: 14px;
+}
+#header .btnseach{
+    float: right;
+    
+}
+#header .btn-search{
+    color: #fff;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 21px;
+}
+#header .btnseach:hover{
+    background: sienna;
+    cursor: pointer;
+}
+#slider .text-context{
+    color:#fff;
+    bottom: 0px;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+#slider .text-heding{
+    font-size: 24px;
+    font-weight: 500;
+}
+#slider .text-cripsion{
+    padding: 25px;
+    font-size: 15px;
+}
+
+#container .the-band{
+    padding-top: 64px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container .selection-heding{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+}
+#container .selection-sub-heding{
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: center;
+    opacity: 0.7;
+    font-style : italic;
+}
+#container .about-text{
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#container .member-list{
+    margin-bottom: 80px;
+    text-align: center;
+    margin-top: 32px;
+    
+}
+#container .member-name{
+    margin: 15px;
+    
+    font-size: 15px;
+}
+#container .member-img{
+    width: 154px;
+    border-radius: 4px;
+}
+#container .the-tour{
+    padding-bottom: 90px;
+    background: #000;
+}
+.ticket-list .sold-out{
+    margin-left: 16px;
+    padding: 3px 4px;
+    background-color: #f44336;
+    color: #fff;
+}
+.ticket-list .quantity{
+    width: 24px;
+    background-color: #000;
+    float: right;
+    border-radius: 83%;
+    height: 22px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -1px;
+}
+.ticket-list li{
+    list-style-type: none;
+    color: #757575;  
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #fff;
+}
+.place-list{
+    margin-top: 32px;
+    padding-bottom: 32px;
+}
+.place-list .place-body{
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+}
+.place-list .place-imng{
+    display: block;
+    width: 100%;
+}
+.place-imng:hover{
+    opacity: 0.6;
+}
+.place-list .place-heding{
+   
+    font-size: 15px;
+    font-weight: 500;
+}
+.place-list .place-time{
+    margin-top: 15px;
+    opacity: 0.6;
+}
+.place-list .place-des
+{
+    line-height: 1.4;
+    margin-top: 15px;
+}
+.place-list .buy-ticket-bnt{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 15px 16px;
+    background-color: #000;
+}
+.buy-ticket-bnt:hover{
+    background: #ccc;   
+    color: #000;
+}
+.modal{
+    display: none;
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+.modal-container {
+    animation: modalFaceIn ease 0.4s;
+    position: relative;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    background: #fff;
+    height: 460px;
+}
+.modal-header {
+    display: flex;
+    height: 130px;
+    font-size: 30px;
+    width: 100%;
+    background: #009688;
+    color: #fff;
+    /* text-align: center; */
+    letter-spacing: 6px;
+    /* font-weight: 100; */
+    /* font-weight: 500; */
+    justify-content: center;
+    align-items: center;
+}
+.ti-close{
+    position: absolute;
+    color: #fff;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+}
+.ti-close:hover {
+    opacity: 0.6;
+}
+.ti-bag {
+    margin-right: 14px;
+}
+.modal-body {
+    padding: 12px;
+}
+.modal-item {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-input {
+    font-size: 15px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #fff;
+}
+#pay-ticket {
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    background: #009688;
+    font-size: 15px;
+    padding: 16px;
+    text-transform: uppercase;
+}
+#pay-ticket:hover{
+    opacity: 0.9;
+}
+.modal-footer {
+    position: absolute;
+    right: 2;
+    bottom: 14px;
+    right: 16px;
+    
+}
+.modal-footer a{
+    color: #2196f3;
+}
+.open{
+    display: flex;
+}
+.contact-contennt{
+    margin-bottom: 100px;
+    margin-top: 48px;
+}
+.contact-info{
+    line-height: 1.5;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-info i{
+    display: inline-block;
+    width: 30px;
+}
+.contact-info a{
+    opacity: 0.8;
+    color:#101AEF;
+}
+.form-control{
+    outline: none;
+    width: 100%;
+    border: 1px solid #ccc;
+    /* border-color: #ccc; */
+    padding: 9px;
+    font-size: 16px;
+    border-radius: 0.4;
+}
+.send{
+    padding: 14px;
+    float: right;
+    border: 1px solid #ccc;
+    background: #000;
+    color: #fff;
+}
+.send:hover{
+    cursor: pointer;
+    background: #fff;
+    color: black;
+}
+@keyframes modalFaceIn{
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes menuin{
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .ticker {
+    letter-spacing: 7px;
+    font-size: 48px;
+}
+#footer .ticker a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+} 
+.text-ticker{
+    padding: 13px;
+    font-size: 24px;
+    color: rgba(0,0,0,0.5);
+    font-weight: 500;
+}
+.text-ticker a{
+    color: rgba(0,0,0,0.5);
+}
+.text-ticker a:hover{
+    opacity: 0.6;
+}
+
