@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="shortcut icon" href="./assets/img/tao.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -14,25 +15,28 @@
         <div id="header">    
             <!-- menu da cap-->
             <ul id="nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="#slider">Home</a></li>
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <a href="">
+                <li id="js-more">
+                    <a href="#">
                         More
                         <i class="nav-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
             <!--button tim kiem-->
             <div class="btnseach">
                 <i class="btn-search ti-search"></i>
+            </div>
+            <div class="js-mobile moblie-menu-btn">
+                <i class="mobile-menu ti-menu"></i>
             </div>
         </div>
         <div id="slider">
@@ -217,6 +221,46 @@
         container.addEventListener('click', function (event){ 
             event.stopPropagation() //dừng nổi bọt từ container
         })
+    </script>
+    <script>
+        const menumoblie = document.querySelector('.js-mobile')
+        var header = document.getElementById('header')
+        var headerhight=header.clientHeight;
+        menumoblie.addEventListener('click',function () {
+            var isclose = header.clientHeight === headerhight
+            if(isclose){
+                header.style.height= 'auto';
+            } else{
+                header.style.height= null;
+            }
+        } )
+        //var more= document.getElementById('js-more')
+        //const SubNav = document.querySelector('.subnav')
+        //var heightMore=more.clientHeight;
+        //function showMore (){
+       //     SubNav.classList.add('open-more');
+       // }
+        //function closeMore (){
+       //     SubNav.classList.remove('open-more');
+       // }
+       // more.onclick = function () {
+       //    console.log(more.clientHeight);
+       // }
+        //console.log(header.clientHeight); chieu cao
+        //menumobile.onclick=function(){} bien bang id
+        var menuitems=document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0 ; i < menuitems.length ; i++)
+        {
+            var menuitem = menuitems[i];
+            menuitem.onclick = function () {
+                var showmore= this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(showmore){
+                    event.preventDefault();
+                }else{
+                    header.style.height= null;
+                }
+            }
+        }
     </script>
 </body>
 </html>

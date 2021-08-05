@@ -1,0 +1,45 @@
+@media (min-width: 740px) and (max-width: 1023px)
+{
+    
+}
+@media (max-width: 739px)
+{
+    #nav > li{
+        display: block;
+    }
+    #header .btnseach{
+        display: none;
+    }
+    #nav .subnav{
+        position: initial;
+    }
+    #header{
+        overflow: hidden;
+    }
+    #nav{
+        display: block;
+    }
+    #header .moblie-menu-btn{
+        display: block;
+    }
+    .col{
+        float: initial;
+    }
+    .col-third{
+        margin: 16px 0px;
+        width: 100%;
+    }
+    #container .member-img{
+        width: 195px;
+    }
+    .place-list .buy-ticket-bnt{
+        width: 100%;
+    }
+    .col-half{
+        margin-top: 32px;
+        width: initial;
+    }
+    .send{
+        width: 100%;
+    }
+}

@@ -87,6 +87,7 @@ html{
 }
 
 #nav li a{
+    width: 100%;
     padding: 0 12px;
     text-decoration:none;
     background: #000;
@@ -129,15 +130,28 @@ html{
 #nav .nav-down{
     font-size: 14px;
 }
+#header .moblie-menu-btn,
 #header .btnseach{
-    float: right;
-    
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right; 
 }
+#header .moblie-menu-btn{
+    display: none;
+}
+#header .mobile-menu,
 #header .btn-search{
     color: #fff;
     font-size: 20px;
     line-height: 48px;
     padding: 0 21px;
+}
+#header .moblie-menu-btn:hover{
+    background-color: #fff;
+}
+#header .moblie-menu-btn:hover .mobile-menu{
+    color: #000;
 }
 #header .btnseach:hover{
     background: sienna;
@@ -163,8 +177,12 @@ html{
 #container .the-band{
     padding-top: 64px;
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
+    padding-left: 16px;
+    padding-right: 16px;
+
 }
 
 #container .selection-heding{
@@ -361,6 +379,12 @@ html{
 }
 .open{
     display: flex;
+}
+.open-more{
+    position: absolute;
+}
+.height{
+    height: auto;
 }
 .contact-contennt{
     margin-bottom: 100px;
